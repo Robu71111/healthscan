@@ -1,0 +1,473 @@
+/* ============================================
+   HEALTHSCAN MVP - CUSTOM STYLES
+   ============================================ */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to bottom right, #dbeafe, #e0e7ff);
+    min-height: 100vh;
+}
+
+/* Main App Container */
+#app {
+    max-width: 448px; /* equivalent to max-w-md */
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Header Styles */
+.app-header {
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.header-location {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.header-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.75;
+    margin-top: 0.25rem;
+}
+
+/* Cart Badge */
+.cart-badge {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background: white;
+    border: 2px solid #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    border-color: #4f46e5;
+}
+
+.btn-success {
+    background: linear-gradient(to right, #10b981, #059669);
+    color: white;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Scan Button Grid */
+.scan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.scan-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.scan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.scan-card-camera {
+    background: linear-gradient(to bottom right, #6366f1, #7c3aed);
+    color: white;
+}
+
+.scan-card-upload {
+    background: linear-gradient(to bottom right, #a855f7, #ec4899);
+    color: white;
+}
+
+/* Product Card Styles */
+.product-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: #4f46e5;
+}
+
+.product-card-content {
+    display: flex;
+    align-items: center;
+}
+
+.product-emoji {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.product-info h3 {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Rating Styles */
+.rating-container {
+    background: linear-gradient(to right, #eef2ff, #f3e8ff);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.rating-score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-number {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.rating-high {
+    color: #16a34a;
+}
+
+.rating-medium {
+    color: #eab308;
+}
+
+.rating-low {
+    color: #ea580c;
+}
+
+.rating-poor {
+    color: #dc2626;
+}
+
+/* Harmful Substance Card */
+.substance-card {
+    border: 2px solid;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.substance-high {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+.substance-medium {
+    background: #ffedd5;
+    color: #9a3412;
+    border-color: #fdba74;
+}
+
+.substance-low {
+    background: #fef3c7;
+    color: #854d0e;
+    border-color: #fde047;
+}
+
+.substance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 0.5rem;
+}
+
+.substance-name {
+    font-weight: 600;
+}
+
+.severity-badge {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    background: white;
+    opacity: 0.5;
+}
+
+.substance-concern {
+    font-size: 0.875rem;
+}
+
+/* Alternative Product Card */
+.alternative-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.alternative-card:hover {
+    border-color: #10b981;
+}
+
+.alternative-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.alternative-name {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.alternative-reason {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.alternative-stats {
+    text-align: right;
+    margin-left: 1rem;
+}
+
+.alternative-rating {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.alternative-price {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Ingredient Tags */
+.ingredient-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.ingredient-tag {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* Input Styles */
+.input-field {
+    width: 100%;
+    border: 2px solid #d1d5db;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* Info Box */
+.info-box {
+    background: #dbeafe;
+    border: 2px solid #93c5fd;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.info-box p {
+    font-size: 0.875rem;
+    color: #1e40af;
+}
+
+/* Feature List */
+.feature-list {
+    background: linear-gradient(to right, #eff6ff, #faf5ff);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 0.75rem;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+}
+
+.feature-text {
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+/* Delivery Options */
+.delivery-container {
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.delivery-option {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delivery-option:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.delivery-option:last-child {
+    margin-bottom: 0;
+}
+
+.delivery-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.delivery-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #app {
+        max-width: 100%;
+    }
+}
+
+/* Loading Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+/* Smooth Transitions */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
